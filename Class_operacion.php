@@ -9,18 +9,18 @@ class operacion
     public $resultado = 0;
 
     //constructor
-    function __construct($intCant1, $intCant2)
+    function __construct($intCant1, $intCant2) 
     {
 
         $this->cantidad1 = $intCant1;
         $this->cantidad2 = $intCant2;
     }
     //del constructor nacen los metodos de los cuales se procesara la informacion
-    public function getsuma()
+    public function getsuma()// geters
     {
 
         $this->resultado = $this->cantidad1 + $this->cantidad2;
-        return $this->resultado;
+        return $this->resultado; 
     }
 
     public function getresta()
@@ -89,15 +89,15 @@ class persona
     private $direc;
     protected $phone;
 
-    function __construct($var1, $var2, $var3, $var4, $var5, $var6)
+    function __construct($nombr, $apelli , $email , $password ,$direction,$phoneN)
     {
 
-        $this->nombre = $var1;
-        $this->apellido = $var2;
-        $this->correo = $var3;
-        $this->passcon = $var4;
-        $this->direc = $var5;
-        $this->phone = $var6;
+        $this->nombre = $nombr;
+        $this->apellido = $apelli;
+        $this->correo = $email;
+        $this->passcon = $password;
+        $this->direc = $direction;
+        $this->phone = $phoneN;
     }
     public function getData()
     {
@@ -112,5 +112,5 @@ class persona
                 phone: {$this->phone}<br>";
         return $datos;
     }
-    
+
 }
