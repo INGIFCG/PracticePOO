@@ -1,5 +1,5 @@
 <?php
-trait producto{
+trait productos{
 
     public $strProducto;
     public $fltPrecio;
@@ -9,7 +9,7 @@ trait producto{
     public function setProducto( string $producto, float $precio, int $stock){
         $this-> strProducto= $producto;
         $this-> fltPrecio = $precio;
-        $this-> intStock= $stock;
+        $this-> inStock= $stock;
         
     }
     public function getProducto():string{
@@ -17,12 +17,12 @@ trait producto{
         $alldata= "{
             Producto:{$this->strProducto}<br>
             Precio: {$this->fltPrecio}<br>
-            Stock:  {$this->intStock}<br>
+            Stock:  {$this->inStock}<br>
         }";
         return $alldata;
     }
     public function setStock(int $cantidad){
-        $this->intStock= $this->intStock - $cantidad;
+        $this->inStock= $this->inStock - $cantidad;
     }
 } //end trait producto
 ?>

@@ -4,8 +4,8 @@ require_once("producto.php");
 require_once("Carrito.php");
 
 
-class tienda{
-    use  producto,carrito;
+class Tienda{
+    use  productos,carrito;
 
     public $fltTotal = 0;
 
@@ -15,7 +15,7 @@ class tienda{
         $factura= "
         Producto:{$this->strProducto}<br>
         Precio: {$this->fltPrecio}<br>
-        Stock:  {$this->intStock}<br>
+        Stock:  {$this->inStock}<br>
         Total: {$this->fltTotal}   
         ";
         

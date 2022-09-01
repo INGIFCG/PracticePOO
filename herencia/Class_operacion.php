@@ -83,13 +83,13 @@ class persona
 {
 
     public $nombre;
-    public $apelido;
+    public $apellido;
     public $correo;
     private $passcon;
     private $direc;
     protected $phone;
 
-    function __construct($nombr, $apelli , $email , $password ,$direction,$phoneN)
+    function __construct($nombr, $apelli, $email , $password ,$direction,$phoneN)
     {
 
         $this->nombre = $nombr;

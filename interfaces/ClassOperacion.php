@@ -3,7 +3,7 @@
 require_once("interface.php");
 /* require_once("operacionesBasicas.php"); */ // tambien se puede colocar varias interfaces 
 
-class calcular implements operacion,operacionBsc{ // y se declaran de esta manera
+class calcular implements operaciones,operacionBsc{ // y se declaran de esta manera
 
     public function raizCuadrada(float $numero):float{
 
