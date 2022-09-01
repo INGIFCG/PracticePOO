@@ -1,6 +1,7 @@
 <?php
 
-class Conexion{
+class Conexion
+{
 
     private $host = 'localhost';
     private $user = 'root';
@@ -8,17 +9,22 @@ class Conexion{
     private $db  = 'test';
     private $conect;
 
-    public function __construct(){
-        $conexionbd = "mysql:host=".$this->host.";dbname=".$this->db.";charset=utf8";
-        try{
-            $this->conect= new PDO($conexionbd,$this->user,$this->password);
-            $this->conect->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    public function __construct()
+    {
+        $conexionbd = "mysql:host=" . $this->host . ";dbname=" . $this->db . ";charset=utf8";
+        try {
+            $this->conect = new PDO($conexionbd, $this->user, $this->password);
+            $this->conect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             echo "Conexion exitosa";
-        }catch(Exception $e){
+        } catch (Exception $e) {
 
-            $this-> conect ="Error de conexion";
-            echo "error: ". $e->getMessage();
+            $this->conect = "Error de conexion";
+            echo "error: " . $e->getMessage();
         }
     }
+    public function connect()
+    {
+        return $this->conect;
+    }
 }
-$conect= new Conexion();
+/* $conect= new Conexion(); */
