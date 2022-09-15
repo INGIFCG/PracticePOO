@@ -1,0 +1,6 @@
+Option All -Indexes
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILNAME} !-d
+RewriteCond %{REQUEST_FILNAME} !-f
+RewriteRule ^(.*)$ index.php?url=[QSA,L]
